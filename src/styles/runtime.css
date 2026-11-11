@@ -1,0 +1,91 @@
+/* Global rules that were injected at runtime via <style> tags in the original build. */
+@keyframes pulse-border {
+    0% {
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+  }
+  @keyframes icon-shine {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.2);
+    }
+    30%, 70% {
+      transform: scale(1.08);
+      box-shadow: 0 0 28px 14px rgba(74, 222, 128, 0.26);
+    }
+  }
+  @keyframes icon-halo {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 0.95;
+      transform: scale(1.12);
+    }
+  }
+  @keyframes icon-flare {
+    0%, 100% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.9);
+    }
+    40% {
+      opacity: 0.7;
+      transform: rotate(45deg) scale(1.1);
+    }
+    60% {
+      opacity: 0.7;
+      transform: rotate(-45deg) scale(1.1);
+    }
+  }
+  .pulse-animate {
+    animation: pulse-border 2s infinite;
+  }
+  .icon-shine {
+    animation: icon-shine 1.8s infinite ease-in-out;
+    position: relative;
+    overflow: visible;
+  }
+  .icon-shine::before,
+  .icon-shine::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 9999px;
+    pointer-events: none;
+  }
+  .icon-shine::before {
+    box-shadow: 0 0 30px 12px rgba(74, 222, 128, 0.3);
+    opacity: 0.55;
+    animation: icon-halo 2.4s infinite ease-in-out;
+  }
+  .icon-shine::after {
+    inset: -12px;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 0 rgba(134, 239, 172, 0.4);
+    animation: icon-flare 2.1s infinite ease-in-out;
+  }
+
+body.chat-open {
+    overflow: hidden;
+  }
+  
+  /* Improve mobile scrolling performance */
+  @media (max-width: 768px) {
+    .chat-container {
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      will-change: scroll-position;
+    }
+    
+    /* Reduce scroll bounce on iOS */
+    .chat-container::-webkit-scrollbar {
+      display: none;
+    }
+  }

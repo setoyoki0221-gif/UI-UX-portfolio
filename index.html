@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- Single theme color meta tag that will be updated by JavaScript -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- iOS Safari specific settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="onyx's Portfolio" />
+
+    <!-- Additional mobile browser support -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#000000" />
+
+    <!-- Favicon and app icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Shinobi Coder Portfolio</title>
+
+    <!-- Preload critical images for instant loading -->
+    <link rel="preload" as="image" href="/img/me.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="/img/visionai.png" />
+    <link rel="preload" as="image" href="/img/chat.png" />
+    <link rel="preload" as="image" href="/img/predict.png" />
+
+    <!-- Preload dock and card background images for navigation -->
+    <link rel="preload" as="image" href="/img/light_dock_bg.jpg" />
+    <link rel="preload" as="image" href="/img/dark_dock_bg.jpg" />
+    <link rel="preload" as="image" href="/img/white_bg_card.jpg" />
+    <link rel="preload" as="image" href="/img/dark_bg_card.jpg" />
+    <link rel="preload" as="image" href="/img/project_dark_bg.jpg" />
+
+    <!-- Preload all certifications -->
+    <link rel="preload" as="image" href="/img/cad.png" />
+    <link rel="preload" as="image" href="/img/csa.png" />
+    <link rel="preload" as="image" href="/img/certi1.png" />
+    <link rel="preload" as="image" href="/img/certi2.png" />
+    <link rel="preload" as="image" href="/img/certi3.png" />
+    <link rel="preload" as="image" href="/img/certi4.png" />
+    <link rel="preload" as="image" href="/img/certi5.png" />
+    <link rel="preload" as="image" href="/img/certi6.png" />
+    <link rel="preload" as="image" href="/img/certi7.png" />
+    <link rel="preload" as="image" href="/img/certi8.png" />
+    <link rel="preload" as="image" href="/img/certi9.png" />
+
+    <!-- Preload all internships -->
+    <link rel="preload" as="image" href="/img/certi10.png" />
+    <link rel="preload" as="image" href="/img/certi11.png" />
+    <link rel="preload" as="image" href="/img/certi12.png" />
+    <link rel="preload" as="image" href="/img/pythondevelopment.png" />
+
+    <!-- Preload all project images -->
+    <link rel="preload" as="image" href="/img/chatai.png" />
+    <link rel="preload" as="image" href="/img/detect.png" />
+
+    <!-- Preload education and other images -->
+    <link rel="preload" as="image" href="/img/bvc.png" />
+    <link rel="preload" as="image" href="/img/educare.png" />
+    <link rel="preload" as="image" href="/img/bot.jpg" />
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inline script to set theme color immediately -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const isDark =
+          savedTheme === "dark" ||
+          (!savedTheme &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+        const color = isDark ? "#000000" : "#ffffff";
+
+        // Update theme-color immediately
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute("content", color);
+
+        // Update status bar style
+        const statusBar = document.querySelector(
+          'meta[name="apple-mobile-web-app-status-bar-style"]'
+        );
+        if (statusBar) {
+          statusBar.setAttribute(
+            "content",
+            isDark ? "black-translucent" : "default"
+          );
+        }
+
+        // Set initial theme class
+        document.documentElement.className = isDark ? "dark" : "light";
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
