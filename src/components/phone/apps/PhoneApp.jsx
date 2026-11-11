@@ -18,13 +18,7 @@ export function PhoneApp({ onClose, onStartClose }) {
       setIsVisible(false);
       setTimeout(onClose, 300);
     },
-    ActionButton = ({
-      icon: Icon,
-      label,
-      color = "#007aff",
-      onClick,
-      isFilled = true,
-    }) => (
+    ActionButton = ({ icon: Icon, label, color = "#007aff", onClick, isFilled = true }) => (
       <button
         onClick={onClick}
         style={{

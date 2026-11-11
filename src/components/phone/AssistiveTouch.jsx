@@ -23,7 +23,10 @@ export function AssistiveTouch({ onLock }) {
       event.preventDefault();
       const touch = event.touches[0],
         parentRect =
-          (parentElement = (containerElement = containerRef.current) == null ? void 0 : containerElement.parentElement) == null
+          (parentElement =
+            (containerElement = containerRef.current) == null
+              ? void 0
+              : containerElement.parentElement) == null
             ? void 0
             : parentElement.getBoundingClientRect();
       parentRect &&
@@ -40,7 +43,10 @@ export function AssistiveTouch({ onLock }) {
       event.preventDefault();
       const touch = event.touches[0],
         parentRect =
-          (parentElement = (containerElement = containerRef.current) == null ? void 0 : containerElement.parentElement) == null
+          (parentElement =
+            (containerElement = containerRef.current) == null
+              ? void 0
+              : containerElement.parentElement) == null
             ? void 0
             : parentElement.getBoundingClientRect();
       if (!parentRect) return;
@@ -59,7 +65,10 @@ export function AssistiveTouch({ onLock }) {
       event.stopPropagation();
       event.preventDefault();
       const parentRect =
-        (parentElement = (containerElement = containerRef.current) == null ? void 0 : containerElement.parentElement) == null
+        (parentElement =
+          (containerElement = containerRef.current) == null
+            ? void 0
+            : containerElement.parentElement) == null
           ? void 0
           : parentElement.getBoundingClientRect();
       parentRect &&
@@ -74,7 +83,10 @@ export function AssistiveTouch({ onLock }) {
         var containerElement, parentElement;
         if (!isDragging) return;
         const parentRect =
-          (parentElement = (containerElement = containerRef.current) == null ? void 0 : containerElement.parentElement) == null
+          (parentElement =
+            (containerElement = containerRef.current) == null
+              ? void 0
+              : containerElement.parentElement) == null
             ? void 0
             : parentElement.getBoundingClientRect();
         if (!parentRect) return;
@@ -88,7 +100,9 @@ export function AssistiveTouch({ onLock }) {
       handleMouseUp = () => {
         setIsDragging(false);
       };
-    isDragging && (document.addEventListener("mousemove", handleMouseMove), document.addEventListener("mouseup", handleMouseUp));
+    isDragging &&
+      (document.addEventListener("mousemove", handleMouseMove),
+      document.addEventListener("mouseup", handleMouseUp));
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);

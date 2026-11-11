@@ -21,5 +21,8 @@ const BLOCKED_PATTERNS = [
 
 export const isMessageHidden = (message) => {
   const searchableText = `${message.text || ""} ${message.sender || ""}`;
-  return HIDDEN_MESSAGE_IDS.has(message.id) || BLOCKED_PATTERNS.some((pattern) => pattern.test(searchableText));
+  return (
+    HIDDEN_MESSAGE_IDS.has(message.id) ||
+    BLOCKED_PATTERNS.some((pattern) => pattern.test(searchableText))
+  );
 };

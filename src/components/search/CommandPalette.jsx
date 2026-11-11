@@ -147,7 +147,8 @@ export const CommandPalette = ({ isOpen, onClose }) => {
       const terms = query.toLowerCase().split(" ");
       return allCommands
         .filter((command) => {
-          const haystack = `${command.title} ${command.description} ${command.category}`.toLowerCase();
+          const haystack =
+            `${command.title} ${command.description} ${command.category}`.toLowerCase();
           return terms.every((term) => haystack.includes(term));
         })
         .slice(0, 8);

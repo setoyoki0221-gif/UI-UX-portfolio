@@ -59,8 +59,12 @@ export function PhoneInterface() {
     var viewportOnResize, viewportOnScroll;
     const updateViewport = () => {
       var heightViewport, widthViewport;
-      const viewportHeight = ((heightViewport = window.visualViewport) == null ? void 0 : heightViewport.height) ?? window.innerHeight,
-        viewportWidth = ((widthViewport = window.visualViewport) == null ? void 0 : widthViewport.width) ?? window.innerWidth,
+      const viewportHeight =
+          ((heightViewport = window.visualViewport) == null ? void 0 : heightViewport.height) ??
+          window.innerHeight,
+        viewportWidth =
+          ((widthViewport = window.visualViewport) == null ? void 0 : widthViewport.width) ??
+          window.innerWidth,
         scale = Math.min(1, (viewportWidth - 32) / 380, (viewportHeight - 32) / 780);
       document.documentElement.style.setProperty("--app-height", `${viewportHeight}px`);
       document.documentElement.style.setProperty("--phone-scale", `${scale}`);
@@ -68,13 +72,17 @@ export function PhoneInterface() {
       document.documentElement.style.setProperty("--phone-stage-height", `${780 * scale}px`);
     };
     updateViewport();
-    (viewportOnResize = window.visualViewport) == null || viewportOnResize.addEventListener("resize", updateViewport);
-    (viewportOnScroll = window.visualViewport) == null || viewportOnScroll.addEventListener("scroll", updateViewport);
+    (viewportOnResize = window.visualViewport) == null ||
+      viewportOnResize.addEventListener("resize", updateViewport);
+    (viewportOnScroll = window.visualViewport) == null ||
+      viewportOnScroll.addEventListener("scroll", updateViewport);
     window.addEventListener("resize", updateViewport);
     return () => {
       var viewportOffResize, viewportOffScroll;
-      (viewportOffResize = window.visualViewport) == null || viewportOffResize.removeEventListener("resize", updateViewport);
-      (viewportOffScroll = window.visualViewport) == null || viewportOffScroll.removeEventListener("scroll", updateViewport);
+      (viewportOffResize = window.visualViewport) == null ||
+        viewportOffResize.removeEventListener("resize", updateViewport);
+      (viewportOffScroll = window.visualViewport) == null ||
+        viewportOffScroll.removeEventListener("scroll", updateViewport);
       window.removeEventListener("resize", updateViewport);
     };
   }, []);
@@ -92,7 +100,9 @@ export function PhoneInterface() {
         );
         const langCode = language === "ja" ? "ja-JP" : "en-US";
         utterance.lang = langCode;
-        const preferredVoice = voices.find((voice) => voice.lang.toLowerCase().startsWith(language === "ja" ? "ja" : "en"));
+        const preferredVoice = voices.find((voice) =>
+          voice.lang.toLowerCase().startsWith(language === "ja" ? "ja" : "en"),
+        );
         preferredVoice && (utterance.voice = preferredVoice);
         utterance.rate = 1;
         utterance.pitch = 1;
@@ -105,7 +115,8 @@ export function PhoneInterface() {
         let attempts = 0;
         const pollId = setInterval(() => {
           attempts++;
-          (window.speechSynthesis.getVoices().length > 0 || attempts > 20) && (clearInterval(pollId), speakNow());
+          (window.speechSynthesis.getVoices().length > 0 || attempts > 20) &&
+            (clearInterval(pollId), speakNow());
         }, 100);
       } else speakNow();
     };
@@ -118,12 +129,15 @@ export function PhoneInterface() {
     }
     isBooting ||
       previousStateRef.current === phoneState ||
-      (phoneState === "LOCKED" && (previousStateRef.current === "BOOTING" || previousStateRef.current === "UNLOCKED")
+      (phoneState === "LOCKED" &&
+      (previousStateRef.current === "BOOTING" || previousStateRef.current === "UNLOCKED")
         ? setTimeout(() => {
             window.speechSynthesis.resume();
             speak(phoneText.lock.unlock);
           }, 1e3)
-        : phoneState === "UNLOCKED" && previousStateRef.current === "LOCKED" && speak(phoneText.lock.welcome),
+        : phoneState === "UNLOCKED" &&
+          previousStateRef.current === "LOCKED" &&
+          speak(phoneText.lock.welcome),
       (previousStateRef.current = phoneState));
   }, [isBooting, language, phoneState]);
   const pages = [
@@ -177,7 +191,9 @@ export function PhoneInterface() {
       },
     ],
     changePage = (direction) => {
-      direction === "right" && pageIndex < pages.length - 1 ? setPageIndex(pageIndex + 1) : direction === "left" && pageIndex > 0 && setPageIndex(pageIndex - 1);
+      direction === "right" && pageIndex < pages.length - 1
+        ? setPageIndex(pageIndex + 1)
+        : direction === "left" && pageIndex > 0 && setPageIndex(pageIndex - 1);
     };
   return (
     <div className="phone-frame relative w-[380px] h-[780px] bg-black rounded-[3rem] shadow-2xl ring-8 ring-slate-800">
@@ -188,7 +204,9 @@ export function PhoneInterface() {
         }}
       >
         {isBooting && <BootScreen onComplete={() => setIsBooting(false)} />}
-        {!isBooting && phoneState === "LOCKED" && <LockScreen onUnlock={() => setPhoneState("UNLOCKED")} />}
+        {!isBooting && phoneState === "LOCKED" && (
+          <LockScreen onUnlock={() => setPhoneState("UNLOCKED")} />
+        )}
         <div
           id="phone-main-interface"
           className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${phoneState === "UNLOCKED" ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
@@ -224,11 +242,15 @@ export function PhoneInterface() {
           }}
           onTouchEnd={(event) => {
             if (activeApp) return;
-            if (event.changedTouches.length === 3 && event.currentTarget.dataset.threeFingerStartX) {
+            if (
+              event.changedTouches.length === 3 &&
+              event.currentTarget.dataset.threeFingerStartX
+            ) {
               const threeFingerStartX = parseFloat(event.currentTarget.dataset.threeFingerStartX),
                 threeFingerEndX = event.changedTouches[0].clientX,
                 threeFingerDeltaX = threeFingerStartX - threeFingerEndX;
-              Math.abs(threeFingerDeltaX) > 5 && (threeFingerDeltaX > 0 ? changePage("right") : changePage("left"));
+              Math.abs(threeFingerDeltaX) > 5 &&
+                (threeFingerDeltaX > 0 ? changePage("right") : changePage("left"));
               delete event.currentTarget.dataset.threeFingerStartX;
               return;
             }
@@ -407,8 +429,15 @@ export function PhoneInterface() {
                     if ("type" in item && item.type === "clock")
                       return <ClockWidget delay={itemIndex * 50} key={itemIndex} />;
                     if ("type" in item && item.type === "weather")
-                      return <WeatherWidget delay={itemIndex * 50} onClick={() => launchApp("weather")} key={itemIndex} />;
-                    if ("type" in item && item.type === "projects") return <ProjectsWidget key={itemIndex} />;
+                      return (
+                        <WeatherWidget
+                          delay={itemIndex * 50}
+                          onClick={() => launchApp("weather")}
+                          key={itemIndex}
+                        />
+                      );
+                    if ("type" in item && item.type === "projects")
+                      return <ProjectsWidget key={itemIndex} />;
                     if ("type" in item && item.type === "empty") return <div key={itemIndex} />;
                     if ("type" in item && item.type === "calendar")
                       return (
@@ -542,13 +571,48 @@ export function PhoneInterface() {
               </div>
             </div>
           </div>
-          {activeApp === "calendar" && <CalendarApp onClose={() => setActiveApp(null)} onStartClose={() => setIsClosingApp(true)} />}
-          {activeApp === "settings" && <SettingsApp onClose={() => setActiveApp(null)} onStartClose={() => setIsClosingApp(true)} />}
-          {activeApp === "phone" && <PhoneApp onClose={() => setActiveApp(null)} onStartClose={() => setIsClosingApp(true)} />}
-          {activeApp === "music" && <MusicApp onClose={() => setActiveApp(null)} onStartClose={() => setIsClosingApp(true)} />}
-          {activeApp === "messages" && <MessagesApp onClose={() => setActiveApp(null)} onStartClose={() => setIsClosingApp(true)} />}
-          {activeApp === "safari" && <SafariApp onClose={() => setActiveApp(null)} onStartClose={() => setIsClosingApp(true)} />}
-          {activeApp === "map" && <MapsApp onClose={() => setActiveApp(null)} onStartClose={() => setIsClosingApp(true)} />}
+          {activeApp === "calendar" && (
+            <CalendarApp
+              onClose={() => setActiveApp(null)}
+              onStartClose={() => setIsClosingApp(true)}
+            />
+          )}
+          {activeApp === "settings" && (
+            <SettingsApp
+              onClose={() => setActiveApp(null)}
+              onStartClose={() => setIsClosingApp(true)}
+            />
+          )}
+          {activeApp === "phone" && (
+            <PhoneApp
+              onClose={() => setActiveApp(null)}
+              onStartClose={() => setIsClosingApp(true)}
+            />
+          )}
+          {activeApp === "music" && (
+            <MusicApp
+              onClose={() => setActiveApp(null)}
+              onStartClose={() => setIsClosingApp(true)}
+            />
+          )}
+          {activeApp === "messages" && (
+            <MessagesApp
+              onClose={() => setActiveApp(null)}
+              onStartClose={() => setIsClosingApp(true)}
+            />
+          )}
+          {activeApp === "safari" && (
+            <SafariApp
+              onClose={() => setActiveApp(null)}
+              onStartClose={() => setIsClosingApp(true)}
+            />
+          )}
+          {activeApp === "map" && (
+            <MapsApp
+              onClose={() => setActiveApp(null)}
+              onStartClose={() => setIsClosingApp(true)}
+            />
+          )}
           {activeApp === "weather" && (
             <WeatherApp
               onClose={() => {

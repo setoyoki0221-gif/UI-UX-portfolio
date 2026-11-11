@@ -75,16 +75,22 @@ export function ProjectsWidget() {
               style={{
                 display: "flex",
                 gap: "10px",
-                background: hoveredIndex === index ? "rgba(30, 41, 59, 0.95)" : "rgba(15, 23, 42, 0.9)",
+                background:
+                  hoveredIndex === index ? "rgba(30, 41, 59, 0.95)" : "rgba(15, 23, 42, 0.9)",
                 borderRadius: "14px",
                 padding: "10px",
-                border: hoveredIndex === index ? `1.5px solid ${accent}60` : "1.5px solid rgba(255, 255, 255, 0.15)",
+                border:
+                  hoveredIndex === index
+                    ? `1.5px solid ${accent}60`
+                    : "1.5px solid rgba(255, 255, 255, 0.15)",
                 transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
                 cursor: "pointer",
                 textDecoration: "none",
                 transform: hoveredIndex === index ? "scale(1.02)" : "scale(1)",
                 boxShadow:
-                  hoveredIndex === index ? `0 8px 24px ${accent}40, 0 0 0 1px ${accent}20` : "0 4px 12px rgba(0, 0, 0, 0.3)",
+                  hoveredIndex === index
+                    ? `0 8px 24px ${accent}40, 0 0 0 1px ${accent}20`
+                    : "0 4px 12px rgba(0, 0, 0, 0.3)",
               }}
               key={`${project.title}-${project.category}`}
             >
@@ -93,7 +99,9 @@ export function ProjectsWidget() {
                   width: "56px",
                   height: "56px",
                   borderRadius: "12px",
-                  background: project.image ? "white" : `linear-gradient(135deg, ${accent}50, ${accent}30)`,
+                  background: project.image
+                    ? "white"
+                    : `linear-gradient(135deg, ${accent}50, ${accent}30)`,
                   border: `1.5px solid ${accent}40`,
                   flexShrink: 0,
                   display: "flex",

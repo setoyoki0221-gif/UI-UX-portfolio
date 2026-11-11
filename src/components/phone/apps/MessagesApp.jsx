@@ -22,16 +22,18 @@ export function MessagesApp({ onClose, onStartClose }) {
         });
         if (data) {
           const sentIds = JSON.parse(localStorage.getItem("my_sent_message_ids") || "[]"),
-            visibleMessages = data.filter((row) => !isMessageHidden(row)).map((row) => ({
-              id: row.id,
-              text: row.text,
-              sender: row.sender,
-              isUser: sentIds.includes(row.id),
-              timestamp: new Date(row.created_at).toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              }),
-            }));
+            visibleMessages = data
+              .filter((row) => !isMessageHidden(row))
+              .map((row) => ({
+                id: row.id,
+                text: row.text,
+                sender: row.sender,
+                isUser: sentIds.includes(row.id),
+                timestamp: new Date(row.created_at).toLocaleTimeString([], {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }),
+              }));
           setMessages(visibleMessages);
         }
       } catch (error) {

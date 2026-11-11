@@ -25,7 +25,9 @@ export function SafariApp({ onClose, onStartClose }) {
       const trimmedQuery = query.trim();
       if (!trimmedQuery) return;
       if (trimmedQuery.includes(".") && !trimmedQuery.includes(" ")) {
-        const directUrl = trimmedQuery.startsWith("http") ? trimmedQuery : `https://${trimmedQuery}`;
+        const directUrl = trimmedQuery.startsWith("http")
+          ? trimmedQuery
+          : `https://${trimmedQuery}`;
         window.open(directUrl, "_blank");
         setQuery("");
         return;

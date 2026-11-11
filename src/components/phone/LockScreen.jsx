@@ -97,7 +97,8 @@ export function LockScreen({ onUnlock }) {
     },
     handleMouseMove = (event) => {
       if (!isMouseDown || !mouseStartY) return;
-      mouseStartY - event.clientY > minSwipeDistance && (setIsPasscodeOpen(true), setIsMouseDown(false));
+      mouseStartY - event.clientY > minSwipeDistance &&
+        (setIsPasscodeOpen(true), setIsMouseDown(false));
     },
     handleMouseEnd = () => {
       setIsMouseDown(false);

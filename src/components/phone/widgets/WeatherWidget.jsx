@@ -122,7 +122,8 @@ export function WeatherWidget({ delay = 0, onClick }) {
                   fontSize: "13px",
                 }}
               >
-                {t.weatherWidget.sunrise}: <span className="text-white">{formatTime(sunData.sunrise)}</span>
+                {t.weatherWidget.sunrise}:{" "}
+                <span className="text-white">{formatTime(sunData.sunrise)}</span>
               </span>
             </div>
           </>

@@ -23,7 +23,9 @@ export function Header({ onOpenPhone }) {
     toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   useEffect(
     () => (
-      isMenuOpen ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "unset"),
+      isMenuOpen
+        ? (document.body.style.overflow = "hidden")
+        : (document.body.style.overflow = "unset"),
       () => {
         document.body.style.overflow = "unset";
       }

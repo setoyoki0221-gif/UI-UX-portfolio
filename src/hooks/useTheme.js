@@ -25,7 +25,9 @@ export function useTheme() {
         themeMeta.setAttribute("name", "theme-color"),
         themeMeta.setAttribute("content", themeColor),
         document.head.appendChild(themeMeta));
-    let statusBarMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    let statusBarMeta = document.querySelector(
+      'meta[name="apple-mobile-web-app-status-bar-style"]',
+    );
     statusBarMeta &&
       statusBarMeta.setAttribute("content", theme === "dark" ? "black-translucent" : "default");
     document.documentElement.style.setProperty("--theme-color", themeColor);

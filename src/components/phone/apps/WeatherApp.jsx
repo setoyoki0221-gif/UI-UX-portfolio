@@ -53,7 +53,15 @@ const WeatherEmoji = (weatherCode, size = 24, isDay = 1) => {
 };
 
 const weatherCodeToEmoji = (weatherCode) =>
-  weatherCode === 0 ? "☀️" : weatherCode <= 3 ? "☁️" : weatherCode <= 67 ? "🌧️" : weatherCode <= 77 ? "❄️" : "🌦️";
+  weatherCode === 0
+    ? "☀️"
+    : weatherCode <= 3
+      ? "☁️"
+      : weatherCode <= 67
+        ? "🌧️"
+        : weatherCode <= 77
+          ? "❄️"
+          : "🌦️";
 
 export function WeatherApp({ onClose, onStartClose }) {
   const { language } = useLanguage(),
@@ -109,7 +117,13 @@ export function WeatherApp({ onClose, onStartClose }) {
           }))
           .filter((entry) => {
             const dateParts = entry.day.split("-");
-            return new Date(parseInt(dateParts[0]), parseInt(dateParts[1]) - 1, parseInt(dateParts[2])) >= today;
+            return (
+              new Date(
+                parseInt(dateParts[0]),
+                parseInt(dateParts[1]) - 1,
+                parseInt(dateParts[2]),
+              ) >= today
+            );
           });
         setWeather({
           location: t.profile.location,
@@ -190,9 +204,12 @@ export function WeatherApp({ onClose, onStartClose }) {
       }),
     formatSunTime = (isoString) => {
       var timePart;
-      const hhmm = ((timePart = isoString.split("T")[1]) == null ? void 0 : timePart.slice(0, 5)) ?? isoString,
+      const hhmm =
+          ((timePart = isoString.split("T")[1]) == null ? void 0 : timePart.slice(0, 5)) ??
+          isoString,
         [hours, minutes] = hhmm.split(":").map(Number),
-        period = hours >= 12 ? (language === "ja" ? "午後" : "PM") : language === "ja" ? "午前" : "AM",
+        period =
+          hours >= 12 ? (language === "ja" ? "午後" : "PM") : language === "ja" ? "午前" : "AM",
         displayHour = hours % 12 || 12;
       return language === "ja"
         ? `${period}${displayHour}:${minutes.toString().padStart(2, "0")}`
@@ -408,7 +425,8 @@ export function WeatherApp({ onClose, onStartClose }) {
                 display: "flex",
                 alignItems: "center",
                 padding: "0.75rem 0",
-                borderBottom: index < weather.daily.length - 1 ? "1px solid rgba(0, 0, 0, 0.1)" : "none",
+                borderBottom:
+                  index < weather.daily.length - 1 ? "1px solid rgba(0, 0, 0, 0.1)" : "none",
               }}
               key={index}
             >

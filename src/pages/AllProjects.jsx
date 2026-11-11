@@ -155,7 +155,9 @@ export function AllProjects() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors"
-                          aria-label={project.liveIsReference ? "View Reference Site" : "View Live Demo"}
+                          aria-label={
+                            project.liveIsReference ? "View Reference Site" : "View Live Demo"
+                          }
                         >
                           <ExternalLink className="w-6 h-6 text-gray-900" />
                         </a>
@@ -164,14 +166,18 @@ export function AllProjects() {
                   </div>
                   <div className="p-6 flex-1 flex flex-col project-card-content">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold">{language === "ja" ? project.titleJa : project.title}</h3>
+                      <h3 className="text-xl font-bold">
+                        {language === "ja" ? project.titleJa : project.title}
+                      </h3>
                       {project.live && (
                         <a
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
                           className={`inline-flex items-center gap-1 px-3 py-1 text-sm font-medium rounded-full transition-all duration-200 hover:scale-105 ${project.liveIsReference ? "bg-yellow-100 hover:bg-yellow-200 dark:bg-yellow-900 dark:hover:bg-yellow-800 text-yellow-700 dark:text-yellow-300" : "bg-green-100 hover:bg-green-200 dark:bg-green-900 dark:hover:bg-green-800 text-green-700 dark:text-green-300"}`}
-                          aria-label={project.liveIsReference ? "View Reference Site" : "View Live Demo"}
+                          aria-label={
+                            project.liveIsReference ? "View Reference Site" : "View Live Demo"
+                          }
                         >
                           <ExternalLink className="w-3 h-3" />
                           {project.liveIsReference ? t.projects.reference : t.projects.live}

@@ -239,7 +239,8 @@ export function SpotlightSearch({ onOpenApp }) {
             style={{
               width: "40px",
               height: "40px",
-              backgroundColor: voiceState === "listening" ? "rgba(219, 68, 55, 0.4)" : "transparent",
+              backgroundColor:
+                voiceState === "listening" ? "rgba(219, 68, 55, 0.4)" : "transparent",
               boxShadow: voiceState === "listening" ? "0 0 15px rgba(219, 68, 55, 0.5)" : "none",
               animation: voiceState === "listening" ? "pulse 1.5s infinite" : "none",
               marginLeft: "8px",

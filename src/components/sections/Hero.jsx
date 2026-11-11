@@ -17,11 +17,19 @@ const RoleTypewriter = () => {
     const timeoutId = setTimeout(() => {
       const currentRole = roles[roleIndex];
       isDeleting
-        ? (setDisplayText(currentRole.substring(0, charIndex - 1)), setCharIndex(charIndex - 1), setDelay(40))
-        : (setDisplayText(currentRole.substring(0, charIndex + 1)), setCharIndex(charIndex + 1), setDelay(50));
+        ? (setDisplayText(currentRole.substring(0, charIndex - 1)),
+          setCharIndex(charIndex - 1),
+          setDelay(40))
+        : (setDisplayText(currentRole.substring(0, charIndex + 1)),
+          setCharIndex(charIndex + 1),
+          setDelay(50));
       !isDeleting && charIndex === currentRole.length
         ? (setDelay(1e3), setIsDeleting(true))
-        : isDeleting && charIndex === 0 && (setIsDeleting(false), setRoleIndex((index) => (index + 1) % roles.length), setDelay(500));
+        : isDeleting &&
+          charIndex === 0 &&
+          (setIsDeleting(false),
+          setRoleIndex((index) => (index + 1) % roles.length),
+          setDelay(500));
     }, delay);
     return () => clearTimeout(timeoutId);
   }, [charIndex, isDeleting, roleIndex, delay, roles]);
@@ -75,7 +83,8 @@ export const Hero = () => {
               webkitExitFullscreen.call(document)) ||
             (msExitFullscreen = document.msExitFullscreen) == null ||
             msExitFullscreen.call(document)
-          : ((requestFullscreen = (fsElement = document.documentElement).requestFullscreen) != null &&
+          : ((requestFullscreen = (fsElement = document.documentElement).requestFullscreen) !=
+              null &&
               requestFullscreen.call(fsElement)) ||
             ((webkitRequestFullscreen = (webkitElement = document.documentElement)
               .webkitRequestFullscreen) != null &&

@@ -31,8 +31,14 @@ export function PhoneAppIcon({
 }) {
   if (image)
     return (
-      <div className="flex flex-col items-center gap-2 relative z-[20]" data-tutorial={dataTutorial}>
-        <button onClick={onClick} className="transition-all duration-200 active:scale-90 hover:scale-105">
+      <div
+        className="flex flex-col items-center gap-2 relative z-[20]"
+        data-tutorial={dataTutorial}
+      >
+        <button
+          onClick={onClick}
+          className="transition-all duration-200 active:scale-90 hover:scale-105"
+        >
           <img
             src={image}
             alt={label}

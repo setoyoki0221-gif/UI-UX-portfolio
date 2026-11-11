@@ -4,7 +4,8 @@ export const ScrollProgress = () => {
   const [progress, setProgress] = useState(0),
     updateProgress = useCallback(() => {
       const scrollTop = document.documentElement.scrollTop,
-        scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+        scrollableHeight =
+          document.documentElement.scrollHeight - document.documentElement.clientHeight,
         percent = (scrollTop / scrollableHeight) * 100;
       setProgress(percent);
     }, []);

@@ -309,7 +309,9 @@ export function Contact() {
                   <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl p-4 animate-fade-in">
                     <div className="flex items-center space-x-2">
                       <XCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                      <p className="text-red-700 dark:text-red-400 text-sm font-medium">{errorMessage}</p>
+                      <p className="text-red-700 dark:text-red-400 text-sm font-medium">
+                        {errorMessage}
+                      </p>
                     </div>
                   </div>
                 )}{" "}

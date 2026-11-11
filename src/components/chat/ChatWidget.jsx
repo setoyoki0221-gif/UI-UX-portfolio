@@ -58,7 +58,11 @@ export function ChatWidget({ onOpenPhone }) {
   }, [messages, userScrolledUp, scrollToBottom]);
   useEffect(
     () => (
-      isOpen && !isMinimized && inputRef.current && window.innerWidth >= 768 && inputRef.current.focus(),
+      isOpen &&
+        !isMinimized &&
+        inputRef.current &&
+        window.innerWidth >= 768 &&
+        inputRef.current.focus(),
       isOpen && !isMinimized
         ? document.body.classList.add("chat-open")
         : document.body.classList.remove("chat-open"),
@@ -528,7 +532,11 @@ export function ChatWidget({ onOpenPhone }) {
                 className="p-1.5 hover:bg-white/10 rounded-lg transition-colors text-white"
                 aria-label={isMinimized ? "Maximize" : "Minimize"}
               >
-                {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+                {isMinimized ? (
+                  <Maximize2 className="w-4 h-4" />
+                ) : (
+                  <Minimize2 className="w-4 h-4" />
+                )}
               </button>
               <button
                 onClick={() => setIsOpen(false)}

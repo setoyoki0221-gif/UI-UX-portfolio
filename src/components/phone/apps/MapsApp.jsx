@@ -8,7 +8,8 @@ export function MapsApp({ onClose, onStartClose }) {
     locationName = t.profile.location,
     embedUrl =
       "https://www.openstreetmap.org/export/embed.html?bbox=139.50%2C35.39%2C139.75%2C35.58&layer=mapnik&marker=35.4437%2C139.6380",
-    externalUrl = "https://www.openstreetmap.org/?mlat=35.4437&mlon=139.6380#map=12/35.4437/139.6380",
+    externalUrl =
+      "https://www.openstreetmap.org/?mlat=35.4437&mlon=139.6380#map=12/35.4437/139.6380",
     handleClose = () => {
       onStartClose == null || onStartClose();
       setTimeout(onClose, 300);
