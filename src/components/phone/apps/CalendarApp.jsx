@@ -61,7 +61,7 @@ export function CalendarApp({ onClose, onStartClose }) {
       company: language === "ja" ? job.companyJa : job.company,
       date: language === "ja" ? job.durationJa : job.duration,
       color: ["#007AFF", "#34C759", "#FF9500", "#FF3B30"][index % 4],
-      logo: (language === "ja" ? job.companyJa : job.company)
+      logo: (job.company ? (language === "ja" ? job.companyJa : job.company) : job.role)
         .split(/\s+/)
         .map((word) => word[0])
         .join("")
@@ -271,15 +271,17 @@ export function CalendarApp({ onClose, onStartClose }) {
                   >
                     {item.title}
                   </div>
-                  <div
-                    style={{
-                      fontSize: "15px",
-                      color: "#000",
-                      marginBottom: "2px",
-                    }}
-                  >
-                    {item.company}
-                  </div>
+                  {item.company && (
+                    <div
+                      style={{
+                        fontSize: "15px",
+                        color: "#000",
+                        marginBottom: "2px",
+                      }}
+                    >
+                      {item.company}
+                    </div>
+                  )}
                   <div
                     style={{
                       fontSize: "13px",

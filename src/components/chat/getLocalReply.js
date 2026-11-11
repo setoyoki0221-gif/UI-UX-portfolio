@@ -9,7 +9,9 @@ export const getLocalReply = (message) => {
       .join(", "),
     topExperienceSummary = experience
       .slice(0, 2)
-      .map((job) => `${job.role} at ${job.company}`)
+      .map((job) =>
+        job.company ? `${job.role} at ${job.company}` : `${job.role} (${job.duration})`,
+      )
       .join(" and ");
   return /(hello|hi|hey|greetings)/.test(normalizedMessage)
     ? "Hi! I'm Seto Yoki's AI assistant. I can help you learn more about my skills, projects, work experience, and contact details."

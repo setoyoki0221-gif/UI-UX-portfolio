@@ -68,14 +68,18 @@ export const Experience = () => {
                       <h3 className="text-xl font-semibold text-green-900 dark:text-green-200">
                         {language === "ja" ? item.roleJa : item.role}
                       </h3>
-                      <p className="text-green-700 dark:text-green-300">
-                        {language === "ja" ? item.companyJa : item.company}
-                      </p>
+                      {(language === "ja" ? item.companyJa : item.company) && (
+                        <p className="text-green-700 dark:text-green-300">
+                          {language === "ja" ? item.companyJa : item.company}
+                        </p>
+                      )}
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {language === "ja" ? item.descriptionJa : item.description}
-                  </p>
+                  {(language === "ja" ? item.descriptionJa : item.description) && (
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {language === "ja" ? item.descriptionJa : item.description}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

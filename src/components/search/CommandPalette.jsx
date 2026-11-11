@@ -108,7 +108,12 @@ export const CommandPalette = ({ isOpen, onClose }) => {
         items.push({
           type: "education",
           title: language === "ja" ? job.roleJa : job.role,
-          description: `${language === "ja" ? job.companyJa : job.company} • ${language === "ja" ? job.durationJa : job.duration}`,
+          description: [
+            language === "ja" ? job.companyJa : job.company,
+            language === "ja" ? job.durationJa : job.duration,
+          ]
+            .filter(Boolean)
+            .join(" • "),
           icon: <FileText className="w-4 h-4" />,
           action: () => {
             var element;
