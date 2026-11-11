@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 export const ScrambleText = () => {
-  const fullName = "Shinobi Coder",
+  const fullName = "Seto Yoki",
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     [firstName, setFirstName] = useState(""),
     [lastName, setLastName] = useState("");
   useEffect(() => {
     let letters = Array(fullName.length).fill(" ");
-    letters[0] = "S";
+    letters[0] = fullName[0];
     let position = 1,
       intervalId;
     function scrambleNext() {
@@ -15,7 +15,7 @@ export const ScrambleText = () => {
         clearInterval(intervalId);
         setTimeout(() => {
           letters = Array(fullName.length).fill(" ");
-          letters[0] = "S";
+          letters[0] = fullName[0];
           position = 1;
           scrambleNext();
         }, 3e3);

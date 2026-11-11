@@ -42,14 +42,14 @@ export const About = () => {
                   <source srcSet="/img/aboutmedark.png" media="(prefers-color-scheme: dark)" />
                   <img
                     src="/img/aboutmelight.png"
-                    alt="About Shinobi Coder"
+                    alt="About Seto Yoki"
                     className="w-full h-full object-cover dark:hidden"
                     loading="lazy"
                   />
                 </picture>
                 <img
                   src="/img/aboutmedark.png"
-                  alt="About Shinobi Coder"
+                  alt="About Seto Yoki"
                   className="hidden w-full h-full object-cover dark:block"
                   loading="lazy"
                 />
@@ -77,7 +77,7 @@ export const About = () => {
                   {t.about.emailLabel}
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 text-sm break-all">
-                  shinobi.coder701@gmail.com
+                  setoyoki0221@gmail.com
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group">

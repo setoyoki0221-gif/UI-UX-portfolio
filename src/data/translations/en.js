@@ -1,6 +1,6 @@
 export const en = {
   common: {
-    brandName: "Shinobi Coder",
+    brandName: "Seto Yoki",
     loading: "Loading...",
   },
   nav: {
@@ -34,7 +34,7 @@ export const en = {
     bio: "I design, develop, and deploy full-stack web applications, AI-powered solutions, and stunning digital experiences that are fast, scalable, and user-focused.",
     githubTooltip: "GitHub Profile",
     emailTooltip: "Send Email",
-    whatsappTooltip: "WhatsApp",
+    telegramTooltip: "Telegram",
     downloadResume: "Download Resume",
     downloading: "Downloading...",
     resumeDownloaded: "Resume Downloaded!",
@@ -43,7 +43,7 @@ export const en = {
   about: {
     tagline: "Discover My Journey",
     heading: "About Me",
-    introHeading: "I'm Shinobi Coder",
+    introHeading: "I'm Seto Yoki",
     paragraph1:
       "Passionate full-stack and AI engineer based in Japan, specialized in building scalable web applications and artificial intelligence solutions.",
     paragraph2:
@@ -52,7 +52,7 @@ export const en = {
     emailLabel: "Email:",
     locationLabel: "Location:",
     availableLabel: "Available:",
-    nameValue: "Shinobi Coder",
+    nameValue: "Seto Yoki",
     locationValue: "Yokohama, Kanagawa, Japan",
     availableValue: "Freelance & Full-time",
   },
@@ -110,8 +110,8 @@ export const en = {
     emailLabel: "Email",
     githubLabel: "GitHub",
     githubValue: "Check out my code repositories",
-    whatsappLabel: "WhatsApp",
-    whatsappValue: "Message me on WhatsApp",
+    telegramLabel: "Telegram",
+    telegramValue: "Message me on Telegram",
     locationLabel: "Location",
     locationValue: "Yokohama, Kanagawa, Japan",
     formHeading: "Send a Message",
@@ -142,16 +142,16 @@ export const en = {
     hint: "Use ↑↓ to navigate • Enter to select • Esc to close",
     results: "results",
     assistantTitle: "AI Assistant",
-    assistantDescription: "Chat with Shinobi Coder's AI assistant about his portfolio",
-    downloadResumeDescription: "Download Shinobi Coder's latest resume (PDF)",
+    assistantDescription: "Chat with Seto Yoki's AI assistant about his portfolio",
+    downloadResumeDescription: "Download Seto Yoki's latest resume (PDF)",
     sendEmailDescription: "Get in touch via email",
     navigateTo: "Navigate to {section} section",
     technologySkill: "Technology/Skill",
   },
   aiAssistant: {
     welcomeMessage:
-      "Hi! I'm Shinobi Coder's AI assistant. I can help you learn more about my skills, projects, and experience. What would you like to know?",
+      "Hi! I'm Seto Yoki's AI assistant. I can help you learn more about my skills, projects, and experience. What would you like to know?",
     inputPlaceholder: "Ask me anything about my portfolio...",
-    bubbleWelcome: "Welcome to Shinobi Coder's portfolio! Need help? Ask me",
+    bubbleWelcome: "Welcome to Seto Yoki's portfolio! Need help? Ask me",
   },
 };

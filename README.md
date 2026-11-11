@@ -1,4 +1,4 @@
-# Shinobi Coder Portfolio
+# Seto Yoki Portfolio
 
 Recovered from the live site (https://portfolio-shinobi-coder.vercel.app/) and rebuilt as a
 modular **Vite + React** project.
@@ -63,7 +63,7 @@ public/                       images, sound, favicons, manifest (served as-is)
   JSX was regenerated. Behaviour was checked by rendering the original bundle and this project
   in the same simulated browser and comparing the HTML of 40 components plus the full app, in
   both languages and both themes. All were identical (the only difference is the random letter
-  in the "Shinobi Coder" scramble animation, and dev-server vs. production image URLs).
+  in the "Seto Yoki" scramble animation, and dev-server vs. production image URLs).
 - Component and variable names were chosen during the recovery; some may differ from the
   names you originally used.
 - `src/styles/index.css` is the **compiled** Tailwind v3 output of the original build. It

@@ -1,13 +1,14 @@
 const phoneProfile = {
-  name: "Shinobi Coder",
+  name: "Seto Yoki",
   role: "Lead AI & Full-Stack Software Engineer",
-  image: "/img/me.png",
+  image: "/img/me.jpg",
 };
 
 const phoneContact = {
-  email: "shinobi.coder701@gmail.com",
-  phone: "+81 70-8976-4369",
-  github: "https://github.com/shinobi-coder701",
+  email: "setoyoki0221@gmail.com",
+  telegram: "@setoyoki0221",
+  telegramUrl: "https://t.me/setoyoki0221",
+  github: "https://github.com/setoyoki0221-gif",
 };
 
 const LOCK_PASSWORD_HINT = "1234";

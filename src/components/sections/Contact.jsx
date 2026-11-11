@@ -1,7 +1,7 @@
 import { useState } from "react";
 import confetti from "canvas-confetti";
 import { CheckCircle, Github, Mail, MapPin, RefreshCw, XCircle } from "lucide-react";
-import { SiWhatsapp } from "react-icons/si";
+import { SiTelegram } from "react-icons/si";
 import { useLanguage } from "@/context/LanguageContext";
 
 export function Contact() {
@@ -119,7 +119,7 @@ export function Contact() {
               <p className="text-sm text-gray-600 dark:text-gray-400">{t.contact.leftSubtext}</p>
             </div>
             <a
-              href="mailto:shinobi.coder701@gmail.com"
+              href="mailto:setoyoki0221@gmail.com"
               className="flex items-center space-x-3 group cursor-pointer bg-white dark:bg-gray-800/50 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50 dark:hover:from-green-900/20 dark:hover:to-yellow-900/20 rounded-xl p-4 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 shadow-sm hover:shadow-lg hover:shadow-green-500/10 transform hover:-translate-y-0.5"
               aria-label="Send Email"
               target="_blank"
@@ -134,7 +134,7 @@ export function Contact() {
                   {t.contact.emailLabel}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors truncate">
-                  shinobi.coder701@gmail.com
+                  setoyoki0221@gmail.com
                 </p>
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-1 group-hover:translate-x-0">
@@ -154,7 +154,7 @@ export function Contact() {
               </div>
             </a>
             <a
-              href="https://github.com/shinobi-coder701"
+              href="https://github.com/setoyoki0221-gif"
               className="flex items-center space-x-3 group cursor-pointer bg-white dark:bg-gray-800/50 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50 dark:hover:from-green-900/20 dark:hover:to-yellow-900/20 rounded-xl p-4 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 shadow-sm hover:shadow-lg hover:shadow-green-500/10 transform hover:-translate-y-0.5"
               aria-label="View GitHub Profile"
               target="_blank"
@@ -189,22 +189,22 @@ export function Contact() {
               </div>
             </a>
             <a
-              href="https://wa.me/817089764369"
+              href="https://t.me/setoyoki0221"
               className="flex items-center space-x-3 group cursor-pointer bg-white dark:bg-gray-800/50 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50 dark:hover:from-green-900/20 dark:hover:to-yellow-900/20 rounded-xl p-4 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 shadow-sm hover:shadow-lg hover:shadow-green-500/10 transform hover:-translate-y-0.5"
-              aria-label="Message on WhatsApp"
+              aria-label="Message on Telegram"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="relative">
-                <SiWhatsapp className="w-6 h-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition-all duration-300" />
+                <SiTelegram className="w-6 h-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition-all duration-300" />
                 <div className="absolute inset-0 bg-green-600 dark:bg-green-400 rounded-full opacity-0 group-hover:opacity-20 blur-lg transition-all duration-300" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-base text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
-                  {t.contact.whatsappLabel}
+                  {t.contact.telegramLabel}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors">
-                  +81 70-8976-4369
+                  @setoyoki0221
                 </p>
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-1 group-hover:translate-x-0">

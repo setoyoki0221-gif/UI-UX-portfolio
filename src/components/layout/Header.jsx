@@ -44,7 +44,7 @@ export function Header({ onOpenPhone }) {
               }}
               duration={3}
             >
-              Shinobi Coder
+              Seto Yoki
             </ShimmerText>
           </div>
           <div className="flex items-center gap-2">

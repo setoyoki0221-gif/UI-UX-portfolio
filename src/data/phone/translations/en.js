@@ -26,8 +26,8 @@ export const en = {
     bio: "I design, develop, and deploy full-stack web applications, AI-powered solutions, and user-focused digital experiences.",
   },
   lock: {
-    unlock: "Please unlock Shinobi Coder's phone, the password is 1234",
-    welcome: "Welcome to Shinobi Coder's portfolio.",
+    unlock: "Please unlock Seto Yoki's phone, the password is 1234",
+    welcome: "Welcome to Seto Yoki's portfolio.",
     hint: "Hint: 1234",
     enterPasscode: "Enter Passcode",
   },
@@ -81,7 +81,7 @@ export const en = {
     title: "Contacts",
     message: "message",
     mail: "mail",
-    phone: "phone",
+    telegram: "telegram",
     notes: "Notes",
   },
   messages: {

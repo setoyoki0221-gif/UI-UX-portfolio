@@ -209,7 +209,7 @@ export function ProjectsWidget() {
         }}
       >
         <a
-          href="https://github.com/shinobi-coder701"
+          href="https://github.com/setoyoki0221-gif"
           target="_blank"
           rel="noopener noreferrer"
           style={{

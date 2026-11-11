@@ -26,8 +26,8 @@ export const ja = {
     bio: "フルスタックWebアプリケーション、AIソリューション、ユーザー中心のデジタル体験を設計・開発・デプロイしています。",
   },
   lock: {
-    unlock: "Shinobi Coderのスマートフォンのロックを解除してください。パスワードは1234です。",
-    welcome: "Shinobi Coderのポートフォリオへようこそ。",
+    unlock: "Seto Yokiのスマートフォンのロックを解除してください。パスワードは1234です。",
+    welcome: "Seto Yokiのポートフォリオへようこそ。",
     hint: "ヒント：1234",
     enterPasscode: "パスコードを入力",
   },
@@ -81,7 +81,7 @@ export const ja = {
     title: "連絡先",
     message: "メッセージ",
     mail: "メール",
-    phone: "電話",
+    telegram: "Telegram",
     notes: "メモ",
   },
   messages: {

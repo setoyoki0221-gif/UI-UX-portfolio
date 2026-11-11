@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import { ChevronDown } from "lucide-react";
-import { SiGithub, SiGmail, SiWhatsapp } from "react-icons/si";
+import { SiGithub, SiGmail, SiTelegram } from "react-icons/si";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -121,7 +121,7 @@ export const Hero = () => {
             <div className="flex items-center space-x-4 sm:space-x-6 justify-center lg:justify-start mb-8">
               <div className="relative group flex items-center">
                 <a
-                  href="https://github.com/shinobi-coder701"
+                  href="https://github.com/setoyoki0221-gif"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center text-white bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -136,22 +136,22 @@ export const Hero = () => {
               </div>
               <div className="relative group flex items-center">
                 <a
-                  href="https://wa.me/817089764369"
+                  href="https://t.me/setoyoki0221"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center text-white bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-400 transition-all duration-300 p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105"
-                  aria-label="WhatsApp +81 70-8976-4369"
+                  aria-label="Telegram @setoyoki0221"
                 >
-                  <SiWhatsapp size={16} className="sm:w-4 sm:h-4" />
+                  <SiTelegram size={16} className="sm:w-4 sm:h-4" />
                 </a>
                 <div className="invisible group-hover:visible absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs rounded whitespace-nowrap z-50 opacity-0 group-hover:opacity-100 transition-all duration-200">
-                  {t.hero.whatsappTooltip}: +81 70-8976-4369
+                  {t.hero.telegramTooltip}: @setoyoki0221
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[4px] border-r-[4px] border-t-[4px] border-transparent border-t-gray-900 dark:border-t-white" />
                 </div>
               </div>
               <div className="relative group flex items-center">
                 <a
-                  href="mailto:shinobi.coder701@gmail.com"
+                  href="mailto:setoyoki0221@gmail.com"
                   className="flex items-center justify-center text-white bg-red-500 hover:bg-red-600 dark:bg-red-400 dark:hover:bg-red-300 transition-all duration-300 p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105"
                   aria-label="Send Email"
                 >
@@ -208,10 +208,10 @@ export const Hero = () => {
                 </div>
               </div>
               <picture>
-                <source srcSet="/img/me-dark.jpg" media="(prefers-color-scheme: dark)" />
+                <source srcSet="/img/me.jpg" media="(prefers-color-scheme: dark)" />
                 <img
-                  src="/img/me.png"
-                  alt="Shinobi Coder - Full Stack Developer"
+                  src="/img/me.jpg"
+                  alt="Seto Yoki - Full Stack Developer"
                   className="relative z-10 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl hover:scale-105 transition-transform duration-300 border-4 border-white dark:hidden"
                   onMouseEnter={launchConfetti}
                   loading="eager"
@@ -219,8 +219,8 @@ export const Hero = () => {
                 />
               </picture>
               <img
-                src="/img/me-dark.jpg"
-                alt="Shinobi Coder - Full Stack Developer"
+                src="/img/me.jpg"
+                alt="Seto Yoki - Full Stack Developer"
                 className="relative z-10 hidden w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl hover:scale-105 transition-transform duration-300 border-4 border-gray-700 dark:block"
                 onMouseEnter={launchConfetti}
                 loading="eager"

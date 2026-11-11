@@ -16,7 +16,7 @@ export function PageLoader({ onComplete }) {
     };
   }, [onComplete]);
   const isJapanese = language === "ja",
-    portraitSrc = theme === "dark" ? "/img/me-dark.jpg" : "/img/me.png";
+    portraitSrc = "/img/me.jpg";
   return (
     <div
       className={`portfolio-loader ${theme === "dark" ? "portfolio-loader-dark" : "portfolio-loader-light"} ${isLeaving ? "portfolio-loader-leaving" : ""}`}
@@ -28,21 +28,21 @@ export function PageLoader({ onComplete }) {
       <div className="portfolio-loader-orbit portfolio-loader-orbit-two" />
       <div className="portfolio-loader-content">
         <div className="portfolio-loader-topline">
-          <span>SC / 01</span>
+          <span>SY / 01</span>
           <span>{isJapanese ? "横浜 · 日本" : "Yokohama · Japan"}</span>
         </div>
         <div className="portfolio-loader-portrait-wrap">
           <div className="portfolio-loader-ring portfolio-loader-ring-outer" />
           <div className="portfolio-loader-ring portfolio-loader-ring-inner" />
           <div className="portfolio-loader-portrait-glow" />
-          <img src={portraitSrc} alt="Shinobi Coder" className="portfolio-loader-portrait" />
+          <img src={portraitSrc} alt="Seto Yoki" className="portfolio-loader-portrait" />
           <div className="portfolio-loader-index">01</div>
         </div>
         <div className="portfolio-loader-copy">
           <p className="portfolio-loader-kicker">
             {isJapanese ? "AI · フルスタックエンジニア" : "AI · FULL-STACK ENGINEER"}
           </p>
-          <h1>Shinobi Coder</h1>
+          <h1>Seto Yoki</h1>
           <div className="portfolio-loader-status">
             <span className="portfolio-loader-pulse" />
             <span>{isJapanese ? "ポートフォリオを読み込み中" : "Loading portfolio"}</span>

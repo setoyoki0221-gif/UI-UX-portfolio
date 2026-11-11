@@ -12,7 +12,7 @@ export const getLocalReply = (message) => {
       .map((job) => `${job.role} at ${job.company}`)
       .join(" and ");
   return /(hello|hi|hey|greetings)/.test(normalizedMessage)
-    ? "Hi! I'm Shinobi Coder's AI assistant. I can help you learn more about my skills, projects, work experience, and contact details."
+    ? "Hi! I'm Seto Yoki's AI assistant. I can help you learn more about my skills, projects, work experience, and contact details."
     : /(skill|technology|tech|stack|framework|library)/.test(normalizedMessage)
       ? "I work with React, Next.js, TypeScript, Tailwind CSS, Python, Flask, TensorFlow, PyTorch, OpenAI APIs, LangChain, and Vercel deployment."
       : /(project|work|github|repo|website|app)/.test(normalizedMessage)
@@ -22,6 +22,6 @@ export const getLocalReply = (message) => {
           : /(experience|background|professional|career)/.test(normalizedMessage)
             ? "He has experience building AI-powered web applications, computer vision systems, chatbots, and cloud-deployed full stack solutions."
             : /(contact|email|reach|hire|talk)/.test(normalizedMessage)
-              ? "You can contact me through the website contact form or by email at shinobi.coder701@gmail.com."
+              ? "You can contact me through the website contact form or by email at setoyoki0221@gmail.com."
               : "I couldn't reach the live AI service, but I can still help with portfolio details. Ask me about my projects, skills, education, or contact info.";
 };

@@ -113,7 +113,7 @@ export const projects = [
     descriptionJa:
       "書類から構造化データを抽出し、手入力を減らして、非構造化ドキュメントを検索可能な業務知識へ変換するインテリジェントな処理ワークフローです。",
     image: "/img/python_project.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     technologies: ["Python", "OpenAI GPT-4o-mini", "Pandas", "CI/CD"],
     category: "AI",
   },
@@ -123,7 +123,7 @@ export const projects = [
     description: "AI Picasso is a Japanese generative-AI image creation service launched in 2022.",
     descriptionJa: "AIピカソ（AI Picasso） は、2022年に登場した日本のAI画像生成サービスです。",
     image: "/img/project9.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     technologies: ["Python", "OpenAI GPT-4o-mini", "Pandas"],
     category: "AI",
   },
@@ -135,7 +135,7 @@ export const projects = [
     descriptionJa:
       "AIメーカーは、2018年に日本のエンジニア 2z（@2zn01） が開発・公開した、誰でも簡単にAIを作れるWebサービスです。2018年7月に公開されました。",
     image: "/img/project10.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     live: "https://aimaker.io",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     category: "AI",
@@ -148,7 +148,7 @@ export const projects = [
     descriptionJa:
       "「在宅勤務しますメーカー」は、2020年ごろのリモートワーク普及期に作られた、日本の個人開発系Webサービスです。",
     image: "/img/project11.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     live: "https://wfhmaker.com/",
     technologies: ["React", "OpenAI GPT-4o-mini", "Tailwind CSS"],
     category: "Full Stack",
@@ -160,7 +160,7 @@ export const projects = [
       "The story centers around humanity's struggle against mysterious beings called Nephilim.",
     descriptionJa: "異世界から現れた敵 ネフィリム によって、人類が危機に陥ります。",
     image: "/img/chat.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     live: "https://apps.apple.com/jp/app/%E3%82%BB%E3%83%AC%E3%82%B9%E3%83%86%E3%82%A3%E3%82%A2%E3%83%AB%E3%83%9E%E3%82%AD%E3%83%8A-%E9%BB%84%E6%98%8F%E3%81%AE%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%A2/id6468563524",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     category: "Mobile",
@@ -172,7 +172,7 @@ export const projects = [
     descriptionJa:
       "GEAR STACK（ギアスタック）は、キャンプ用品をコレクションとして管理するためのiPhoneアプリです。",
     image: "/img/drive_safe.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     live: "https://apps.apple.com/jp/app/gear-stack-%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%82%AE%E3%82%A2%E7%AE%A1%E7%90%86/id6443632328",
     technologies: ["React", "TypeScript", "Browser Geolocation APIs"],
     category: "Mobile",
@@ -185,7 +185,7 @@ export const projects = [
     descriptionJa:
       "「カルティエ、時の結晶」は、2019年に東京・国立新美術館で開催されたカルティエの展覧会のために制作された、非常に完成度の高いインタラクティブWebサイトです。",
     image: "/img/project8.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     live: "https://cartier2019.exhn.jp",
     technologies: ["React", "TypeScript", "Three.js"],
     category: "3D",
@@ -198,7 +198,7 @@ export const projects = [
     descriptionJa:
       "BMSG FES'25は、BMSGの5周年を記念して2025年9月27日・28日に東京・お台場で開催された大型音楽フェスの公式Webサイトです。",
     image: "/img/project7.png",
-    github: "https://github.com/shinobi-coder701",
+    github: "https://github.com/setoyoki0221-gif",
     live: "https://bmsgfes.tokyo/2025/",
     technologies: ["React", "Three.js", "TypeScript"],
     category: "3D",

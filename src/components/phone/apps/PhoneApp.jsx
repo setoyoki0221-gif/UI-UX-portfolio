@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronLeft, Github, Mail, Phone } from "lucide-react";
+import { ChevronLeft, Github, Mail, Send } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { phoneData } from "@/data/phone/profile";
 import { getPhoneText } from "@/data/phone/translations";
@@ -229,12 +229,10 @@ export function PhoneApp({ onClose, onStartClose }) {
               onClick={() => (window.location.href = `mailto:${phoneData.contact.email}`)}
             />
             <ActionButton
-              icon={Phone}
-              label={t.contact.phone}
+              icon={Send}
+              label={t.contact.telegram}
               isFilled={false}
-              onClick={() =>
-                (window.location.href = `tel:${phoneData.contact.phone.replace(/\D/g, "")}`)
-              }
+              onClick={() => window.open(phoneData.contact.telegramUrl, "_blank")}
             />
             <ActionButton
               icon={Github}
@@ -264,13 +262,11 @@ export function PhoneApp({ onClose, onStartClose }) {
               onClick={() => (window.location.href = `mailto:${phoneData.contact.email}`)}
             />
             <InfoRow
-              label="phone"
-              value={phoneData.contact.phone}
+              label="telegram"
+              value={phoneData.contact.telegram}
               isLast
               isLink
-              onClick={() =>
-                (window.location.href = `tel:${phoneData.contact.phone.replace(/\D/g, "")}`)
-              }
+              onClick={() => window.open(phoneData.contact.telegramUrl, "_blank")}
             />
           </div>
           <div

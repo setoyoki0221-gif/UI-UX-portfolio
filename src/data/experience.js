@@ -2,8 +2,8 @@ export const experience = [
   {
     role: "Lead AI and Full-Stack Software Engineer",
     roleJa: "リードAI・フルスタックソフトウェアエンジニア",
-    company: "Shinobi Coder Studio (Freelance)",
-    companyJa: "Shinobi Coder Studio（フリーランス）",
+    company: "Seto Yoki (Freelance)",
+    companyJa: "Seto Yoki（フリーランス）",
     duration: "2024 - 2026",
     durationJa: "2024年 - 2026年",
     description:

@@ -1,5 +1,5 @@
 import { ArrowUp, Github, Mail } from "lucide-react";
-import { SiWhatsapp } from "react-icons/si";
+import { SiTelegram } from "react-icons/si";
 import { useLanguage } from "@/context/LanguageContext";
 
 export function Footer() {
@@ -16,7 +16,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex space-x-4 order-2 md:order-1">
             <a
-              href="https://github.com/shinobi-coder701"
+              href="https://github.com/setoyoki0221-gif"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors"
@@ -25,7 +25,7 @@ export function Footer() {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="mailto:shinobi.coder701@gmail.com"
+              href="mailto:setoyoki0221@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-green-500 transition-colors"
@@ -34,19 +34,19 @@ export function Footer() {
               <Mail className="w-6 h-6" />
             </a>
             <a
-              href="https://wa.me/817089764369"
+              href="https://t.me/setoyoki0221"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-green-500 transition-colors"
-              aria-label="WhatsApp +81 70-8976-4369"
+              aria-label="Telegram @setoyoki0221"
             >
-              <SiWhatsapp className="w-6 h-6" />
+              <SiTelegram className="w-6 h-6" />
             </a>
           </div>
           <p className="text-gray-600 dark:text-gray-300 text-center order-1 md:order-2 btn-shine">
             {"© "}
             {new Date().getFullYear()}
-            {" Shinobi Coder. "}
+            {" Seto Yoki. "}
             {t.footer.rights}
           </p>
           <button

@@ -1,6 +1,6 @@
 export const ja = {
   common: {
-    brandName: "Shinobi Coder",
+    brandName: "Seto Yoki",
     loading: "読み込み中...",
   },
   nav: {
@@ -34,7 +34,7 @@ export const ja = {
     bio: "高速でスケーラブル、ユーザー中心のフルスタックWebアプリケーション、AIソリューション、そして印象的なデジタル体験を設計・開発・デプロイしています。",
     githubTooltip: "GitHubプロフィール",
     emailTooltip: "メールを送る",
-    whatsappTooltip: "WhatsApp",
+    telegramTooltip: "Telegram",
     downloadResume: "履歴書をダウンロード",
     downloading: "ダウンロード中...",
     resumeDownloaded: "履歴書をダウンロードしました！",
@@ -43,7 +43,7 @@ export const ja = {
   about: {
     tagline: "私の歩みを知る",
     heading: "自己紹介",
-    introHeading: "Shinobi Coderです",
+    introHeading: "Seto Yokiです",
     paragraph1:
       "日本を拠点に活動する、フルスタック・AIエンジニアです。スケーラブルなWebアプリケーションと人工知能ソリューションの構築を専門としています。",
     paragraph2:
@@ -52,7 +52,7 @@ export const ja = {
     emailLabel: "メール：",
     locationLabel: "所在地：",
     availableLabel: "稼働状況：",
-    nameValue: "Shinobi Coder",
+    nameValue: "Seto Yoki",
     locationValue: "神奈川県横浜市、日本",
     availableValue: "フリーランス・フルタイム対応可",
   },
@@ -110,8 +110,8 @@ export const ja = {
     emailLabel: "メール",
     githubLabel: "GitHub",
     githubValue: "コードリポジトリをご覧ください",
-    whatsappLabel: "WhatsApp",
-    whatsappValue: "WhatsAppでメッセージを送る",
+    telegramLabel: "Telegram",
+    telegramValue: "Telegramでメッセージを送る",
     locationLabel: "所在地",
     locationValue: "神奈川県横浜市、日本",
     formHeading: "メッセージを送る",
@@ -142,16 +142,16 @@ export const ja = {
     hint: "↑↓で移動 • Enterで選択 • Escで閉じる",
     results: "件の結果",
     assistantTitle: "AIアシスタント",
-    assistantDescription: "Shinobi CoderのAIアシスタントとポートフォリオについて話す",
-    downloadResumeDescription: "Shinobi Coderの最新の履歴書（PDF）をダウンロード",
+    assistantDescription: "Seto YokiのAIアシスタントとポートフォリオについて話す",
+    downloadResumeDescription: "Seto Yokiの最新の履歴書（PDF）をダウンロード",
     sendEmailDescription: "メールで連絡する",
     navigateTo: "{section}セクションへ移動",
     technologySkill: "技術・スキル",
   },
   aiAssistant: {
     welcomeMessage:
-      "こんにちは！Shinobi CoderのAIアシスタントです。スキルやプロジェクト、経歴について何でも聞いてください。",
+      "こんにちは！Seto YokiのAIアシスタントです。スキルやプロジェクト、経歴について何でも聞いてください。",
     inputPlaceholder: "ポートフォリオについて何でも聞いてください...",
-    bubbleWelcome: "Shinobi Coderのポートフォリオへようこそ！お困りですか？聞いてください",
+    bubbleWelcome: "Seto Yokiのポートフォリオへようこそ！お困りですか？聞いてください",
   },
 };

@@ -123,7 +123,7 @@ export function BootScreen({ onComplete }) {
               }}
             >
               <img
-                src="/img/me.png"
+                src="/img/me.jpg"
                 alt={phoneData.profile.name}
                 style={{
                   width: "100%",

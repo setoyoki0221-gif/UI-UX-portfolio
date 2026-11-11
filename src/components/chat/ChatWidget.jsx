@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  CalendarDays,
   Loader,
   Loader2,
   Maximize2,
@@ -170,7 +169,7 @@ export function ChatWidget({ onOpenPhone }) {
               message: messageText,
               history: history,
               context:
-                "You are an AI assistant for Shinobi Coder's portfolio. Help visitors learn about my skills, projects, work experience, and professional background. Be helpful, professional, and engaging." +
+                "You are an AI assistant for Seto Yoki's portfolio. Help visitors learn about my skills, projects, work experience, and professional background. Be helpful, professional, and engaging." +
                 (language === "ja" ? " Respond in Japanese." : " Respond in English."),
             }),
           });
@@ -423,14 +422,14 @@ export function ChatWidget({ onOpenPhone }) {
       {!isOpen && (
         <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
           <a
-            href="https://calendly.com/shinobi-coder701/30min"
+            href="https://t.me/setoyoki0221"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group icon-shine mb-7 flex items-center justify-center bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 hover:scale-110 w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg hover:shadow-xl border border-gray-200/80 dark:border-gray-700/80 hover:border-green-300 dark:hover:border-green-500 transition-all duration-200 backdrop-blur-sm"
-            aria-label="Schedule a meeting"
-            title="Schedule a meeting"
+            aria-label="Message on Telegram"
+            title="Message on Telegram"
           >
-            <CalendarDays className="h-5 w-5 text-green-600 dark:text-green-400 md:h-6 md:w-6" />
+            <Send className="h-5 w-5 text-green-600 dark:text-green-400 md:h-6 md:w-6" />
           </a>
           <button
             type="button"

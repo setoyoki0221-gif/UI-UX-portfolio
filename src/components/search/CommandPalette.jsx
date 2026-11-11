@@ -39,7 +39,7 @@ export const CommandPalette = ({ isOpen, onClose }) => {
         description: t.search.sendEmailDescription,
         icon: <Mail className="w-4 h-4" />,
         action: () => {
-          window.open("mailto:shinobi.coder701@gmail.com", "_blank");
+          window.open("mailto:setoyoki0221@gmail.com", "_blank");
           onClose();
         },
       });
